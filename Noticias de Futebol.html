@@ -208,9 +208,12 @@
     <section class="formulario">
         <h2>Fale sobre sua paixão pelo futebol!</h2>
 
-        <!-- Formulário para o usuário enviar suas histórias -->
+        <!-- Formulário para o usuário enviar suas histórias -->	
         <form id="formTorcedor" action="#" method="post">
-
+		
+			<label for="Nome">Digite seu nome</label>
+			<input type="text" id="nome" name="nome" required>
+			
             <label for="time">Seu time do coração:</label>
             <input type="text" id="time" name="time" required>
 
@@ -227,7 +230,7 @@
         </form>
 
         <div id="mensagem"></div>
-    </section>
+    </section>	
 
 </main>
 
