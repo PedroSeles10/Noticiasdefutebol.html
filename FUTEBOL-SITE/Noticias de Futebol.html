@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página exibido no navegador -->
+    <title>Futebol Hoje</title>
+
+    <style>
+        /* ---------------------------------------------------------
+           ESTILOS GERAIS DA PÁGINA
+        --------------------------------------------------------- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f5ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho superior */
+        header {
+            background-color: #0055aa;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Seção geral de notícias */
+        section.noticias {
+            margin-bottom: 40px;
+        }
+
+        /* Caixa de cada notícia */
+        .noticia {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0055aa;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Imagens dentro das notícias */
+        .noticia img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Títulos */
+        h2 {
+            color: #0055aa;
+        }
+
+        /* ---------------------------------------------------------
+           MÍDIA DO ESTÊVÃO (FOTO + VÍDEOS)
+        --------------------------------------------------------- */
+        .midia-estevao {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Tamanho padronizado da foto e vídeos */
+        .midia-estevao img,
+        .midia-estevao video {
+            width: 200px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* ---------------------------------------------------------
+           FORMULÁRIO DO TORCEDOR
+        --------------------------------------------------------- */
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        /* Botão de envio */
+        button {
+            margin-top: 20px;
+            background-color: #0077cc;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Mensagem de confirmação do envio */
+        #mensagem {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0055aa;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ---------------------------------------------------------
+     CABEÇALHO PRINCIPAL DA PÁGINA
+---------------------------------------------------------- -->
+<header>
+    <h1>Futebol Hoje</h1>
+    <p>As últimas notícias e espaço para torcedores compartilharem suas paixões!</p>
+</header>
+
+
+<main>
+
+    <!-- ---------------------------------------------------------
+         SEÇÃO DE NOTÍCIAS
+    ---------------------------------------------------------- -->
+    <section class="noticias">
+        <h2>📰 Notícias Recentes</h2>
+
+        <!-- Notícia 1: Santos x Mirassol -->
+        <div class="noticia">
+            <h3>Santos x Mirassol</h3>
+
+            <p>
+                Duas lutas diferentes: O Alvinegro Praiano joga para afastar-se de vez do Z4,
+                enquanto o Leão Caipira quer carimbar a vaga direta para Libertadores.
+            </p>
+
+            <!-- Link para transmissão ao vivo -->
+            <p>
+                <a href="https://www.youtube.com/watch?v=WQJjbEaFJTY" target="_blank">
+                    👉 Acompanhar o jogo ao vivo no YouTube
+                </a>
+            </p>
+        </div>
+
+        <!-- Notícia 2: Briga pelo título -->
+        <div class="noticia">
+            <h3>Briga pelo título</h3>
+
+            <p>
+                Em SP: Palmeiras recebe o Vitória, que está no Z4.  
+                No Rio, um clássico: Flu x Fla, no Maracanã.
+            </p>
+            <img src="tabela.png" alt="Tabela do campeonato">
+        </div>
+
+
+             <div class="noticia">
+            <h3>Seleção Brasileira</h3>
+
+            
+               <p> Brasil fez um belo jogo contra Senegal, mas teve dificuldades contra a Tunísia. </p>
+               <p> Destaque para Estêvão que chamou atenção pela habilidade, confiança e visão de jogo.</p>
+
+            <h2>Confira:</h2>
+
+            <!-- Grupo da foto + vídeos -->
+            <div class="midia-estevao">
+                <img src="file:///C:/Users/Pedro%20Seles/Desktop/FUTEBOL-SITE/estevaofoto.avif" alt="Foto de Estêvão">
+
+                <video controls>
+                    <source src="estevao1.mp4" type="video/mp4">
+                </video>
+
+                <video controls>
+                    <source src="estevao2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ---------------------------------------------------------
+         FORMULÁRIO DO TORCEDOR
+    ---------------------------------------------------------- -->
+    <section class="formulario">
+        <h2>Fale sobre sua paixão pelo futebol!</h2>
+
+        <!-- Formulário para o usuário enviar suas histórias -->	
+        <form id="formTorcedor" action="#" method="post">
+		
+			<label for="Nome">Digite seu nome</label>
+			<input type="text" id="nome" name="nome" required>
+			
+            <label for="time">Seu time do coração:</label>
+            <input type="text" id="time" name="time" required>
+
+            <label for="jogador">Seu jogador preferido do atual elenco:</label>
+            <input type="text" id="jogador" name="jogador" required>
+
+            <label for="titulo">Momento marcante que você vivenciou com seu time:</label>
+            <textarea id="titulo" name="titulo" rows="3" required></textarea>
+
+            <label for="piorMomento">Pior momento que você viveu como torcedor:</label>
+            <textarea id="piorMomento" name="piorMomento" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="mensagem"></div>
+    </section>	
+
+</main>
+
+
+<!-- ---------------------------------------------------------
+     SCRIPT PARA MENSAGEM DE CONFIRMAÇÃO DO FORMULÁRIO
+---------------------------------------------------------- -->
+<script>
+document.getElementById("formTorcedor").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const dados = {
+        nome: document.getElementById("nome").value,
+        time: document.getElementById("time").value,
+        jogador: document.getElementById("jogador").value,
+        titulo: document.getElementById("titulo").value,
+        piorMomento: document.getElementById("piorMomento").value
+    };
+
+    // Salva temporariamente no navegador
+    localStorage.setItem("torcedor", JSON.stringify(dados));
+
+    // Vai para outra página
+    window.location.href = "resposta.html";
+});
+</script>
+
+
+</body>
+</html>

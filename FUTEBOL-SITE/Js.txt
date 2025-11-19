@@ -1,0 +1,19 @@
+<script>
+document.getElementById("formTorcedor").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const dados = {
+        nome: document.getElementById("nome").value,
+        time: document.getElementById("time").value,
+        jogador: document.getElementById("jogador").value,
+        titulo: document.getElementById("titulo").value,
+        piorMomento: document.getElementById("piorMomento").value
+    };
+
+    // Salva temporariamente no navegador
+    localStorage.setItem("torcedor", JSON.stringify(dados));
+
+    // Vai para outra página
+    window.location.href = "resposta.html";
+});
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados enviados</title>
+</head>
+<body style="font-family: Arial; max-width: 700px; margin: auto; padding: 40px;">
+
+    <h1>Obrigado por participar!</h1>
+    <h2>Aqui estão as informações que você enviou :</h2>
+
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Time do coração:</strong> <span id="time"></span></p>
+    <p><strong>Jogador preferido:</strong> <span id="jogador"></span></p>
+    <p><strong>Momento marcante:</strong> <span id="titulo"></span></p>
+    <p><strong>Pior momento:</strong> <span id="piorMomento"></span></p>
+
+    <br><br>
+    <a href="index.html">⬅ Voltar ao site</a>
+
+    <script>
+        const dados = JSON.parse(localStorage.getItem("torcedor"));
+
+        if (dados) {
+            document.getElementById("nome").textContent = dados.nome;
+            document.getElementById("time").textContent = dados.time;
+            document.getElementById("jogador").textContent = dados.jogador;
+            document.getElementById("titulo").textContent = dados.titulo;
+            document.getElementById("piorMomento").textContent = dados.piorMomento;
+        } else {
+            document.body.innerHTML = "<h2>Nenhum dado foi enviado!</h2>";
+        }
+    </script>
+
+</body>
+</html>
